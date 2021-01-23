@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment02</title>
+</head>
+<header>
+ <style>
+   .headtop{
+     text-align: center;;
+     margin: 20px auto;
+     padding: 100px;;
+     color:white;
+     background-color: rgb(171, 84, 104);
+     font-size: 30px;
+   }
+ </style>
+<body>
+
+  <!-- ----ans to the question no 01------ -->
+
+  <header class="headtop">
+
+  <label for="inpuinc">inchi</label>
+  <input type="number" placeholder="inche" id ="inpuinc" oninput  ="jannat(this.value)" onchange = "jannat(this.value)">
+  <p>feet :<span id="janatachange"></span></p>
+
+<!-- //   feet to miles -->
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Miles: <span id="outputMiles"></span></p>
+    
+  </header>
+<p>please see app.js file </p>
+  <script>
+    
+// inche to feet
+
+function jannat(valNum){
+    document.getElementById("janatachange").innerHTML=valNum*0.0833333;
+}
+jannat(valNum);
+
+ //   feet to miles -->
+
+function LengthConverter(valNum) {
+    document.getElementById("outputMiles").innerHTML=valNum*0.00018939;
+  }
+  LengthConverter(valNum);
+
+  </script>
+
+      <script src="assignment02.js"></script>
+</body>
+</html>
